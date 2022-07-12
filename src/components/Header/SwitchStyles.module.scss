@@ -1,0 +1,48 @@
+.TonggleButton{
+    background-color: var(--tonggleBackground);
+    display: flex;
+    align-items: center;
+    width: 50px;
+    padding: 1px 0;
+    border-radius: 20px;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px #000;
+    cursor: pointer;
+}
+
+.Circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.Icon {
+    color: var( --iconSwitchColor);
+    margin-left: 4px;
+    
+    transition: all 0.2s ease;
+    transform: translateY(5%);
+    line-height: 10px;
+}
+
+.input:checked ~ .Circle {
+    transform: translateX(-24px);
+    -webkit-transform: translateX(-24px);
+    -ms-transform: translateX(-24px);
+}
+.input:checked ~ .Icon {
+    transform: translateX(24px);
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+}
+.input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}

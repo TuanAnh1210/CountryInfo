@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'ProximaNova', sans-serif;
+}
+
+/* 
+body {
+    overflow-y: overlay;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+} */
+
+:root {
+    --iconSwitchColor: yellow;
+    --tonggleBackground: #4169e1;
+    --TextShadow: 2px 3px 3px rgba(0, 0, 0, .3);
+    --BoxShadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+    --SelectOptionBackground: rgb(1, 147, 207);
+}
+
+.darkTheme {
+    background-color: rgb(36, 58, 77);
+    color: #fff;
+    box-shadow: var(--BoxShadow);
+}
+
+.lightTheme {
+    background-color: #fff;
+    color: #111;
+    box-shadow: var(--BoxShadow);
+}
+
+.App {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
