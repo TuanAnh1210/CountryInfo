@@ -8,10 +8,8 @@ function Search(props) {
 
   const navigate = useNavigate();
 
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 13) {
-      valueInput !== "" ? navigate(`/search/${valueInput}`) : navigate("/");
-    }
+  const handleKeyDown = (value) => {
+    value !== "" ? navigate(`/search/${value}`) : navigate("/");
   };
   return (
     <SearchPane>
@@ -20,9 +18,11 @@ function Search(props) {
         <input
           type="text"
           placeholder="input the and enter to search... "
-          onChange={(e) => setValueInput(e.target.value)}
+          onChange={(e) => {
+            setValueInput(e.target.value);
+            handleKeyDown(e.target.value);
+          }}
           value={valueInput}
-          onKeyDown={handleKeyDown}
         />
         <Link
           to={valueInput !== "" ? `/search/${valueInput}` : "/"}
